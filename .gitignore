@@ -16,3 +16,12 @@
 !/log/.keep
 /tmp
 /node_modules
+
+/vendor/backbone
+/vendor/jquery
+/vendor/requirejs
+/vendor/underscore
+
+/public/assets
+
+

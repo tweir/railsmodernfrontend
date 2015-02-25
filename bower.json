@@ -1,0 +1,27 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "Jesse Martin"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendor"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
+    "underscore": "~1.6.0",
+    "requirejs": "~2.1.11"
+  }
+}
