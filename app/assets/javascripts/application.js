@@ -20,6 +20,8 @@ require(['domReady', 'app'], function(domReady, app) {
         app.init();
     });
 });*/
-require(['jquery','bootstrap/alert'], function($,alert) {
-
+require(['jquery','bootstrap/alert'], function($,a) {
+    $(document).ready(function(){
+        
+    });
 });
