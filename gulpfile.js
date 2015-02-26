@@ -11,7 +11,8 @@
     LESS_DIR = 'app/assets/stylesheets',
     JS_DIR = 'app/assets/javascripts',
     CSS_DIST = 'public/assets/css',
-    JS_DIST = 'public/assets/js';
+    JS_DIST = 'public/assets/js',
+    FONT_DIST = 'public/assets/fonts';
 
   gulp.task('clean', function (cb) {
     del(['public/assets'], cb);
@@ -36,15 +37,21 @@
         .pipe(gulp.dest(CSS_DIST));
   });
 
+  gulp.task('fonts', ['clean'], function () {
+    return gulp.src('vendor/bootstrap/fonts/*.{ttf,woff,eof,svg,woff2}')
+        .pipe(gulp.dest(FONT_DIST));
+  });
+
   gulp.task('js', ['clean'], function () {
     return requirejs.optimize({
         baseUrl: JS_DIR,
         include: ['application.js'],
         out: JS_DIST + '/application.js',
         paths: {
-          jquery: '../../vendor/jquery/dist/jquery',
-          underscore: '../../vendor/underscore/underscore',
-          backbone: '../../vendor/backbone/backbone'
+          jquery: '../../../vendor/jquery/dist/jquery',
+          underscore: '../../../vendor/underscore/underscore',
+          bootstrap: '../../../vendor/bootstrap/js/',
+          backbone: '../../../vendor/backbone/backbone'
         },
         waitSeconds: 15,
         optimize: 'uglify2',
@@ -54,7 +61,7 @@
       });
   });
 
-  gulp.task('build', ['clean', 'css', 'js', 'vendor', 'images']);
+  gulp.task('build', ['clean', 'css', 'js', 'vendor', 'images', 'fonts']);
 
   gulp.task('watch', function () {
     gulp.watch('app/**/*', ['build']);

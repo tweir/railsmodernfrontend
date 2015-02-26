@@ -18,6 +18,7 @@
 /node_modules
 
 /vendor/backbone
+/vendor/bootstrap
 /vendor/jquery
 /vendor/requirejs
 /vendor/underscore
