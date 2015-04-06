@@ -14,3 +14,4 @@ gulp build
 
 == References
 * https://github.com/jessemartin/boilerplate
+* https://github.com/BoilerplateMVC/Backbone-Require-Boilerplate
