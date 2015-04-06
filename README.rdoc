@@ -1,28 +1,16 @@
-== README
+== Overview
+Rails plus a 'modern' frontend asset pipeline that is not dependent on sprockets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Install
 
-Things you may want to cover:
+npm install -g bower
+npm install -g gulp
 
-* Ruby version
+bundle install
+npm install
+bower install
 
-* System dependencies
+gulp build
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== References
+* https://github.com/jessemartin/boilerplate
